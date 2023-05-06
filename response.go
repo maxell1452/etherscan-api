@@ -70,6 +70,22 @@ type InternalTx struct {
 	ErrCode         string  `json:"errCode"`
 }
 
+// InternalTxByHash holds info from internal tx query
+type InternalTxByHash struct {
+	BlockNumber     int     `json:"blockNumber,string"`
+	TimeStamp       Time    `json:"timeStamp"`
+	From            string  `json:"from"`
+	To              string  `json:"to"`
+	Value           *BigInt `json:"value"`
+	ContractAddress string  `json:"contractAddress"`
+	Input           string  `json:"input"`
+	Type            string  `json:"type"`
+	Gas             int     `json:"gas,string"`
+	GasUsed         int     `json:"gasUsed,string"`
+	IsError         int     `json:"isError,string"`
+	ErrCode         string  `json:"errCode"`
+}
+
 // ERC20Transfer holds info from ERC20 token transfer event query
 type ERC20Transfer struct {
 	BlockNumber       int     `json:"blockNumber,string"`
