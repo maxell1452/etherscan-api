@@ -1,4 +1,4 @@
-module github.com/nanmu42/etherscan-api
+module github.com/maxell1452/etherscan-api
 
 go 1.13
 
