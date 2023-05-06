@@ -117,8 +117,9 @@ func (c *Client) call(module, action string, param map[string]interface{}, outco
 		err = wrapErr(err, "http.NewRequest")
 		return
 	}
-	req.Header.Set("User-Agent", "etherscan-api(Go)")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36")
 	req.Header.Set("Content-Type", "application/json; charset=utf-8")
+	req.Header.Set("Accept-Encoding", "gzip, deflate, br")
 
 	if c.Verbose {
 		var reqDump []byte
